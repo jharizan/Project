@@ -21,7 +21,21 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</h1>
+        <?php
+        $rolestr="";
+
+        if ($_SESSION["role"]=="1"){
+            $rolestr="Employer";
+
+        }
+        if ($_SESSION["role"]=="2"){
+            $rolestr="Employee";
+
+        }
+        ?>
+
+        <h2>You are a <b><?php echo $rolestr; ?></b>.</h2>
     </div>
     <p>
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
