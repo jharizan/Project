@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </table>
     <?php if ($_SESSION["role"] == "3") {
-        echo "   <p> <a href=\"reset-password.php\" class=\"btn btn-success\">Добави Обява</a> </p>";
+        echo "   <p> <a href=\"create_ad.php\" class=\"btn btn-success\">Добави Обява</a> </p>";
     }
     ?>
 

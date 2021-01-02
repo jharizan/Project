@@ -29,7 +29,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     require_once "header.php";
     ?>
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</h1>
+        <h1>Здравейте, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>.</h1>
         <?php
         $rolestr = "";
 
@@ -45,11 +45,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         }
         ?>
 
-        <h2>You are an <b><?php echo $rolestr; ?></b>.</h2>
+        <h2>Вие сте <b><?php echo $rolestr; ?></b>.</h2>
     </div>
     <p>
-        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+        <a href="reset-password.php" class="btn btn-warning">Смяна на парола</a>
+        <a href="logout.php" class="btn btn-danger">Изход от профил</a>
     </p>
 
     <?php
